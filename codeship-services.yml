@@ -15,14 +15,14 @@ dockercfg-test:
     image: codeship.azurecr.io/codeship-testing
     path: ./dockercfg-generator
     dockerfile_path: Dockerfile.test
-deployment:
-  build:
-    image: codeship/azure-deployment
-    path: ./deployment
-    dockerfile_path: Dockerfile
-  environment:
-    - AZURE_RESOURCE_GROUP=cs-k8s
-    - AZURE_CLUSTER_NAME=cs-k8s-testing
-  encrypted_env_file: aks.env.encrypted
-  volumes:
-    - ./deployment/tests:/tests
+# deployment:
+#   build:
+#     image: codeship/azure-deployment
+#     path: ./deployment
+#     dockerfile_path: Dockerfile
+#   environment:
+#     - AZURE_RESOURCE_GROUP=cs-k8s
+#     - AZURE_CLUSTER_NAME=cs-k8s-testing
+#   encrypted_env_file: aks.env.encrypted
+#   volumes:
+#     - ./deployment/tests:/tests
